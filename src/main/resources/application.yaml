@@ -8,3 +8,13 @@ synapsys:
   core-token: syn_JZUSFz3J9Cw_Axg8smJLCSUjYZcwjFyzzEUnueG5AOdJrJT4u9eXupY
   heartbeat-interval: 5s
   worker-name: spring-boot-gradle-user-1
+
+  # How long shutdown waits for running processes to become terminal before it
+  # reports them and finishes. SlowStopperProcess and UncancellableBatchProcess
+  # outlast a short budget on purpose, which is what the warning is for: the
+  # starter never kills a thread it does not own.
+  shutdown-timeout: 10s
+
+  # Set false to keep remote start/stop while leaving System.out and System.err
+  # untouched. Process output then stays local instead of being streamed to Core.
+  capture-console: true
